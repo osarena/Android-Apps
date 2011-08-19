@@ -16,7 +16,7 @@ sleep 1
 git stash
 git stash clear
 git pull
-sleep 2
+sleep 1
 ) | zenity --width 100 \
            --height 150 \
            --progress \
