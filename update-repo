@@ -16,6 +16,7 @@ sleep 1
 git stash
 git stash clear
 git pull
+chmod 755 update-repo
 sleep 1
 ) | zenity --width 100 \
            --height 150 \
