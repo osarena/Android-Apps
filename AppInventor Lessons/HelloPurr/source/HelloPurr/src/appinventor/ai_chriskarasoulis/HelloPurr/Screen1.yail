@@ -1,0 +1,26 @@
+#|
+$Source $Yail
+|#
+
+(define-form appinventor.ai_chriskarasoulis.HelloPurr.Screen1 Screen1)
+(require <com.google.youngandroid.runtime>)
+;;; Screen1
+(do-after-form-creation (set-and-coerce-property! 'Screen1 'Title "\u0393\u03b5\u03b9\u03b1 \u03c3\u03bf\u03c5 \u03b3\u03b1\u03c4\u03ac\u03ba\u03b9" 'text)
+)
+;;; Button1
+(add-component Screen1 Button Button1 (set-and-coerce-property! 'Button1 'Image "kitty.png" 'text)
+)
+(define-event Button1 Click()
+ (set-this-form)
+ (call-component-method 'Sound1 'Play (*list-for-runtime*)
+ '())
+
+)
+;;; Label1
+(add-component Screen1 Label Label1 (set-and-coerce-property! 'Label1 'Text "\u03a7\u03ac\u03b9\u03b4\u03b5\u03c8\u03b5 \u03c4\u03b7 \u03b3\u03ac\u03c4\u03b1" 'text)
+)
+;;; Sound1
+(add-component Screen1 Sound Sound1 (set-and-coerce-property! 'Sound1 'Source "meow.mp3" 'text)
+)
+(init-runtime  #f)
+

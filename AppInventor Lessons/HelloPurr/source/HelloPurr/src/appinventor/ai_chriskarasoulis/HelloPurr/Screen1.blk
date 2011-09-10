@@ -1,0 +1,27 @@
+<!DOCTYPE YACodeBlocks SYSTEM "/yacodeblocks/support/save_format.dtd">
+<YACodeBlocks ya-version="51" lang-version="16">
+<Pages><Page page-name=" " page-color="237 245 211" page-width="1280" page-height="1600" page-drawer="My Definitions" >
+<PageBlocks>
+<Block id="623" genus-name="Button-Click" >
+<Location><X>123</X><Y>56</Y></Location>
+<Label>Button1.Click</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="627" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="627" genus-name="Sound-Play" >
+<Location><X>151</X><Y>88</Y></Location>
+<Label>Sound1.Play</Label>
+<BeforeBlockId>623</BeforeBlockId>
+</Block>
+</PageBlocks>
+</Page>
+
+</Pages><YoungAndroidMaps><YoungAndroidUuidMap>
+<YoungAndroidUuidEntry uuid="-1759032096" component-id="Sound1" component-genus="Sound" component-version="3" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="2061189818" component-id="Label1" component-genus="Label" component-version="2" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="0" component-id="Screen1" component-genus="Form" component-version="0" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="271788351" component-id="Button1" component-genus="Button" component-version="3" ></YoungAndroidUuidEntry>
+</YoungAndroidUuidMap>
+</YoungAndroidMaps>
+</YACodeBlocks>
