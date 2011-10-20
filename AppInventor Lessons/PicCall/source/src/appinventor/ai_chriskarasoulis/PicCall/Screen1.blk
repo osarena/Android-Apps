@@ -1,0 +1,81 @@
+<!DOCTYPE YACodeBlocks SYSTEM "/yacodeblocks/support/save_format.dtd">
+<YACodeBlocks ya-version="51" lang-version="16">
+<Pages><Page page-name=" " page-color="237 245 211" page-width="1280" page-height="1600" page-drawer="My Definitions" >
+<PageBlocks>
+<BlockStub><StubParentName>PhoneNumberPicker1.Picture</StubParentName><StubParentGenus>read-only-property</StubParentGenus><Block id="1163" genus-name="componentGetter" >
+<Location><X>274</X><Y>276</Y></Location>
+<Label>PhoneNumberPicker1.Picture</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1161" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>Button1.Image</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1161" genus-name="componentSetter" >
+<Location><X>132</X><Y>273</Y></Location>
+<Label>Button1.Image</Label>
+<BeforeBlockId>1157</BeforeBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1163" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>PhoneNumberPicker1.PhoneNumber</StubParentName><StubParentGenus>read-only-property</StubParentGenus><Block id="1159" genus-name="componentGetter" >
+<Location><X>264</X><Y>238</Y></Location>
+<Label>PhoneNumberPicker1.PhoneNumber</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1157" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>Button1.Text</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1157" genus-name="componentSetter" >
+<Location><X>132</X><Y>235</Y></Location>
+<Label>Button1.Text</Label>
+<BeforeBlockId>1153</BeforeBlockId>
+<AfterBlockId>1161</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1159" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>PhoneNumberPicker1.PhoneNumber</StubParentName><StubParentGenus>read-only-property</StubParentGenus><Block id="1155" genus-name="componentGetter" >
+<Location><X>340</X><Y>200</Y></Location>
+<Label>PhoneNumberPicker1.PhoneNumber</Label>
+<Plug><BlockConnector connector-kind="plug" connector-type="poly" init-type="poly" label="" position-type="single" con-block-id="1153" ></BlockConnector></Plug>
+</Block>
+</BlockStub>
+<BlockStub><StubParentName>PhoneCall1.PhoneNumber</StubParentName><StubParentGenus>read-write-property</StubParentGenus><Block id="1153" genus-name="componentSetter" >
+<Location><X>132</X><Y>197</Y></Location>
+<Label>PhoneCall1.PhoneNumber</Label>
+<BeforeBlockId>1149</BeforeBlockId>
+<AfterBlockId>1157</AfterBlockId>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="poly" init-type="poly" label="to" position-type="single" con-block-id="1155" ></BlockConnector>
+</Sockets>
+</Block>
+</BlockStub>
+<Block id="1149" genus-name="PhoneNumberPicker-AfterPicking" >
+<Location><X>104</X><Y>165</Y></Location>
+<Label>PhoneNumberPicker1.AfterPicking</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="1153" ></BlockConnector>
+</Sockets>
+</Block>
+<Block id="969" genus-name="PhoneCall-MakePhoneCall" >
+<Location><X>127</X><Y>103</Y></Location>
+<Label>PhoneCall1.MakePhoneCall</Label>
+<BeforeBlockId>965</BeforeBlockId>
+</Block>
+<Block id="965" genus-name="Button-Click" >
+<Location><X>99</X><Y>71</Y></Location>
+<Label>Button1.Click</Label>
+<Sockets num-sockets="1" >
+<BlockConnector connector-kind="socket" connector-type="cmd" init-type="cmd" label="do" is-indented="yes" position-type="single" con-block-id="969" ></BlockConnector>
+</Sockets>
+</Block>
+</PageBlocks>
+</Page>
+
+</Pages><YoungAndroidMaps><YoungAndroidUuidMap>
+<YoungAndroidUuidEntry uuid="1895775162" component-id="Button1" component-genus="Button" component-version="3" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="-555619915" component-id="PhoneCall1" component-genus="PhoneCall" component-version="1" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="0" component-id="Screen1" component-genus="Form" component-version="0" ></YoungAndroidUuidEntry>
+<YoungAndroidUuidEntry uuid="1320987465" component-id="PhoneNumberPicker1" component-genus="PhoneNumberPicker" component-version="3" ></YoungAndroidUuidEntry>
+</YoungAndroidUuidMap>
+</YoungAndroidMaps>
+</YACodeBlocks>

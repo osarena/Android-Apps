@@ -1,0 +1,106 @@
+#|
+$Source $Yail
+|#
+
+(define-form appinventor.ai_chriskarasoulis.PaintPot.Screen1 Screen1)
+(require <com.google.youngandroid.runtime>)
+(def big 8)
+
+(def small 2)
+
+(def Dotsize 5)
+
+;;; Screen1
+(do-after-form-creation (set-and-coerce-property! 'Screen1 'Scrollable #f 'boolean)
+(set-and-coerce-property! 'Screen1 'Title "\u0396\u03c9\u03b3\u03c1\u03b1\u03c6\u03b9\u03ba\u03ae" 'text)
+)
+;;; HorizontalArrangement1
+(add-component Screen1 HorizontalArrangement HorizontalArrangement1 (set-and-coerce-property! 'HorizontalArrangement1 'Width -2 'number)
+)
+;;; ButtonRed
+(add-component HorizontalArrangement1 Button ButtonRed (set-and-coerce-property! 'ButtonRed 'BackgroundColor #xFFFF0000 'number)
+(set-and-coerce-property! 'ButtonRed 'Text "Red" 'text)
+(set-and-coerce-property! 'ButtonRed 'Width -2 'number)
+)
+(define-event ButtonRed Click()
+ (set-this-form)
+ (set-and-coerce-property! 'Canvas1 'PaintColor -65536 'number)
+
+)
+;;; ButtonBlue
+(add-component HorizontalArrangement1 Button ButtonBlue (set-and-coerce-property! 'ButtonBlue 'BackgroundColor #xFF0000FF 'number)
+(set-and-coerce-property! 'ButtonBlue 'Text "Blue" 'text)
+(set-and-coerce-property! 'ButtonBlue 'Width -2 'number)
+)
+(define-event ButtonBlue Click()
+ (set-this-form)
+ (set-and-coerce-property! 'Canvas1 'PaintColor -16776961 'number)
+
+)
+;;; ButtonGreen
+(add-component HorizontalArrangement1 Button ButtonGreen (set-and-coerce-property! 'ButtonGreen 'BackgroundColor #xFF00FF00 'number)
+(set-and-coerce-property! 'ButtonGreen 'Text "Green" 'text)
+(set-and-coerce-property! 'ButtonGreen 'Width -2 'number)
+)
+(define-event ButtonGreen Click()
+ (set-this-form)
+ (set-and-coerce-property! 'Canvas1 'PaintColor -16711936 'number)
+
+)
+;;; Canvas1
+(add-component Screen1 Canvas Canvas1 (set-and-coerce-property! 'Canvas1 'Height -2 'number)
+(set-and-coerce-property! 'Canvas1 'Width -2 'number)
+)
+(define-event Canvas1 Touched( x  y  touchedSprite )
+ (set-this-form)
+ (call-component-method 'Canvas1 'DrawCircle (*list-for-runtime* (lexical-value x)
+ (lexical-value y)
+ (get-var Dotsize)
+)
+ '( number number number)
+)
+
+)
+(define-event Canvas1 Dragged( startX  startY  prevX  prevY  currentX  currentY  draggedSprite )
+ (set-this-form)
+ (call-component-method 'Canvas1 'DrawLine (*list-for-runtime* (lexical-value prevX)
+ (lexical-value prevY)
+ (lexical-value currentX)
+ (lexical-value currentY)
+)
+ '( number number number number)
+)
+
+)
+;;; HorizontalArrangement2
+(add-component Screen1 HorizontalArrangement HorizontalArrangement2 )
+;;; ButtonSmall
+(add-component HorizontalArrangement2 Button ButtonSmall (set-and-coerce-property! 'ButtonSmall 'Text "Small" 'text)
+)
+(define-event ButtonSmall Click()
+ (set-this-form)
+ (set-var! Dotsize  (get-var small)
+)
+
+)
+;;; ButtonWipe
+(add-component HorizontalArrangement2 Button ButtonWipe (set-and-coerce-property! 'ButtonWipe 'Text "Wipe" 'text)
+(set-and-coerce-property! 'ButtonWipe 'Width -2 'number)
+)
+(define-event ButtonWipe Click()
+ (set-this-form)
+ (call-component-method 'Canvas1 'Clear (*list-for-runtime*)
+ '())
+
+)
+;;; ButtonBig
+(add-component HorizontalArrangement2 Button ButtonBig (set-and-coerce-property! 'ButtonBig 'Text "Big" 'text)
+)
+(define-event ButtonBig Click()
+ (set-this-form)
+ (set-var! Dotsize  (get-var big)
+)
+
+)
+(init-runtime  #f)
+
